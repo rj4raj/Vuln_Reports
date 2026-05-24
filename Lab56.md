@@ -20,8 +20,16 @@ https://labs.krazeplanet.com/56.php?p='><svg/onload=alert("RAJVARDHAN")>
 ## Payload Used
 '><svg/onload=alert("RAJVARDHAN")>
 
-## Proof of Concept Request
-Screenshot
+# Proof of Concept
+## Screenshot 1 — Malicious payload injected into the vulnerable parameter
+
+![Payload Injection](screenshots/lab56.1.png)
+
+## Screenshot 2 — JavaScript alert triggered successfully in the browser
+
+![XSS Trigger](screenshots/lab56.2.png)
+
+This confirms the presence of a Reflected Cross-Site Scripting (XSS) vulnerability.
 
 ## Impact
 - Cookie stealing
