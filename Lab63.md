@@ -34,11 +34,19 @@ https://kzlabs.com/63.php?view=dashboard
 <img src=x onerror=alert(document.cookie)>
 
 # Proof of Concept
-Screenshot 1 — The malicious payload is successfully stored in the Company Name field without sanitization.
-Screenshot 2 — When the admin dashboard page loads, the stored payload executes automatically and displays the administrator session cookie using 
-`document.cookie`.
+# Proof of Concept
 
-This confirms that arbitrary JavaScript can be executed in the browser context of privileged users.
+## Screenshot 1 — Blind XSS payload stored successfully in the Company Name field
+
+![Payload Submission](screenshots/lab63.png)
+
+## Screenshot 2 — Payload execution triggered inside the admin dashboard
+
+![Blind XSS Trigger](screenshots/lab63.1.png)
+
+## Screenshot 3 — Administrator session cookie displayed through document.cookie
+
+![Admin Cookie Access](screenshots/lab63.2.png)
 
 # Impact
 
