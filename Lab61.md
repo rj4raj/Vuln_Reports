@@ -35,11 +35,11 @@ https://kzlabs.com/61.php
 
 # Proof of Concept
 
-Screenshot 1 — The malicious payload is successfully stored inside the article field without sanitization.
+## Screenshot 1 — Malicious payload stored inside the Write Article functionality
 
-Screenshot 2 — When the "My Articles" page loads, the stored payload executes automatically and triggers a JavaScript alert box.
+![Stored Article Payload](screenshots/lab61.png)
 
-This confirms that arbitrary HTML and JavaScript can be injected and executed persistently.
+This confirms that arbitrary JavaScript can be stored and executed persistently when the article page is viewed.
 
 # Impact
 
