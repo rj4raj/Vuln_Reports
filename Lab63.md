@@ -5,12 +5,10 @@ Stored Blind Cross-Site Scripting (Blind XSS) via Company Name Field
 Stored Blind XSS
 
 ## Summary
-While testing the application, I found that the "Company Name" field does not properly sanitize or encode user-supplied input before storing and rendering it inside the admin dashboard.
+While testing the application, I found that the `Company Name` field does not properly sanitize or encode user-supplied input before storing and rendering it inside the admin dashboard.
 By injecting a malicious payload into the Company Name field, arbitrary JavaScript gets stored in the application and executes when an administrator or another privileged user views the affected page.
 
-The payload was successfully triggered on the following admin endpoint:
-
-  https://kzlabs.com/63.php?view=dashboard
+The payload was successfully triggered on the following admin endpoint: ` https://kzlabs.com/63.php?view=dashboard`
 
 This confirms the presence of a Stored Blind XSS vulnerability affecting privileged users.
 
