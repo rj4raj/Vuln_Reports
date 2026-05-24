@@ -33,7 +33,20 @@ Alternative Payload:
 html
 javascript:alert(101)
 
-## Proof of Concept Request
+# Proof of Concept
+## Screenshot 1 — Payload submitted successfully into the vulnerable field
+
+![Payload Submission](screenshots/lab57.1.png)
+
+## Screenshot 2 — Malicious payload stored inside the application
+
+![Stored Payload](screenshots/lab57.2.png)
+
+## Screenshot 3 — Stored payload executed automatically when the page was viewed
+
+![Stored XSS Execution](screenshots/lab57.3.png)
+
+This confirms that arbitrary HTML and JavaScript can be injected and executed persistently.
 
 http
 GET /57.php?returnTo=javascript:alert(101) HTTP/1.1
