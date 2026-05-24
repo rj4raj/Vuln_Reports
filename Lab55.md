@@ -13,7 +13,7 @@ I identified a reflected Cross-Site Scripting (XSS) vulnerability in the `search
 
 2. Observe that a JavaScript confirmation popup is triggered immediately.
 
-3. This confirms that arbitrary JavaScript supplied via the "search" parameter is executed in the browser.
+3. This confirms that arbitrary JavaScript supplied via the `search` parameter is executed in the browser.
 
 ## Payload Used
 `rajvardha"+confirm("RAJVARDHAN")+"`
@@ -35,10 +35,10 @@ I identified a reflected Cross-Site Scripting (XSS) vulnerability in the `search
 - Cookie stealing
 - Session hijacking
 - Phishing attacks
-- JavaScript execution in victim browser
+- JavaScript execution in the victim browser
 
 ## Recommendations for Fix
-1. Sanitize all user-controlled input before rendering it in the response.
+1. Sanitise all user-controlled input before rendering it in the response.
 2. Escape special characters such as:
    `<`, `>`, `"`, `'`, `&`
 3. Avoid reflecting unsanitized input directly into HTML or JavaScript contexts.
