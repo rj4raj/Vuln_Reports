@@ -33,12 +33,15 @@ https://kzlabs.com/60.php
 
 # Proof of Concept
 
-Screenshot 1 — The malicious payload is successfully stored inside the application without sanitization.
+## Screenshot 1 — Malicious payload submitted through the New Network Report functionality
 
-Screenshot 2 — When the affected page is loaded, the stored payload executes automatically and triggers a JavaScript alert box.
+![Payload Submission](screenshots/lab60.png)
 
-This confirms that arbitrary HTML and JavaScript can be injected and executed persistently.
+## Screenshot 2 — Stored payload executing automatically when the reports page loads
 
+![Stored XSS Execution](screenshots/lab60.2.png)
+
+This confirms the presence of a Stored Cross-Site Scripting (XSS) vulnerability.
 # Impact
 
 - Steal session cookies of authenticated users
