@@ -12,8 +12,7 @@ The application reflects user-controlled input from the URL path into the page w
 ## Steps to Reproduce
 
 1. Open the following URL in a browser:
-https://kzlabs.com/58.php/account/%22%3E%3Csvg/onload=alert(1)%3E/messages
-
+https://kzlabs.com/58.php/account/PixelWizard/messages
 2. Observe that a JavaScript alert pop-up appears immediately.
 3. This confirms that arbitrary JavaScript supplied through the URL path is executed in the browser.
 
