@@ -8,7 +8,7 @@ I identified a reflected Cross-Site Scripting (XSS) vulnerability in the `search
 `https://kzlabs.com/55.php?search=`
 
 ## Steps to Reproduce
-
+ 
 1. Open the following URL in a browser: `https://kzlabs.com/55.php?search=rajvardha%22%2Bconfirm%28%22RAJVARDHAN%22%29%2B%22`
 
 2. Observe that a JavaScript confirmation popup is triggered immediately.
