@@ -11,6 +11,9 @@ By injecting a malicious payload into the Report Name field, arbitrary JavaScrip
 
 Since the payload is persistent, every authenticated user visiting the affected page can trigger the payload execution, including administrators and potentially privileged users.
 
+Since the payload is stored server-side, the attack automatically affects users viewing the page without requiring malicious links.
+
+
 ## Vulnerable Endpoint
 https://kzlabs.com/60.php
 
@@ -48,16 +51,15 @@ This confirms the presence of a Stored Cross-Site Scripting (XSS) vulnerability.
 - Phishing attacks
 
 
-Since the payload is stored server-side, the attack automatically affects users viewing the page without requiring malicious links.
 
 ## Remediation
-1. Filter and sanitize dangerous HTML tags such as:
-<script>
-<img>
-<svg>
-
-2. Filter dangerous JavaScript event handlers and methods.
-3. Apply proper output encoding before rendering user-controlled input into HTML responses.
-4. If using PHP, use secure encoding functions such as:
-   htmlspecialchars($input, ENT_QUOTES, 'UTF-8');
-5. Avoid rendering raw user input directly into HTML contexts.
+1. Sanitize all user-controlled input before rendering it in the response.
+2. Escape special characters such as:
+   `<`, `>`, `"`, `'`, `&`
+3. Avoid reflecting unsanitized input directly into HTML or JavaScript contexts.
+4. Block dangerous JavaScript functions such as:
+   - `alert()`
+   - `confirm()`
+   - `prompt()`
+5. If using PHP, use secure functions such as:
+php,htmlspecialchars($input, ENT_QUOTES, 'UTF-8');
