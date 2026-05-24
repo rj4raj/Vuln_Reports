@@ -33,6 +33,9 @@ This confirms the presence of a Reflected Cross-Site Scripting (XSS) vulnerabili
 
 ## Impact
 - Cookie stealing
+- Session hijacking
+- Phishing attacks
+- JavaScript execution in victim browser
 
 
 ## Remediation
