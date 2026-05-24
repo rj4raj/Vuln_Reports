@@ -20,7 +20,7 @@ Vulnerable Parameter: Report Name field inside the `New Network Report` form
 1. Navigate to: `https://kzlabs.com/60.php`
 2. Log in with a valid account.
 3. Open the `New Network Report` functionality.
-4. In the "Report Name" field, enter the following payload: `"><img src=x onerror=alert("RAJVARDHAN")>`
+4. In the `Report Name` field, enter the following payload: `"><img src=x onerror=alert("RAJVARDHAN")>`
 5. Fill in the remaining required fields and submit the request.
 6. After the report is created, revisit the Network Reports page.
 7. Observe that a JavaScript alert box appears automatically.
