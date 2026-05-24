@@ -35,9 +35,15 @@ https://kzlabs.com/62.php
 
 # Proof of Concept
 
-Screenshot 1 — The malicious payload is successfully stored inside the Signature field without sanitization.
-Screenshot 2 — When the affected page loads, the stored payload executes automatically and triggers a JavaScript alert box.
-This confirms that arbitrary HTML and JavaScript can be injected and executed persistently.
+## Screenshot 1 — XSS payload injected into the Signature field
+
+![Signature Payload](screenshots/lab62.png)
+
+## Screenshot 2 — Stored payload executing automatically when the affected page loads
+
+![Stored XSS Execution](screenshots/lab62.1.png)
+
+This confirms the presence of a Stored Cross-Site Scripting (XSS) vulnerability in the Signature field.
 
 # Impact
 - Steal session cookies of authenticated users
