@@ -1,5 +1,5 @@
 ## Title
-Reflected Cross-Site Scripting (XSS) in "p" Parameter
+Reflected Cross-Site Scripting (XSS) in `p` Parameter
 
 ## Summary
 I identified a reflected Cross-Site Scripting (XSS) vulnerability in the `p` parameter of the following endpoint:
@@ -9,12 +9,11 @@ https://labs.krazeplanet.com/56.php?p=
 
 
 ## Steps to Reproduce
-1. Open the following URL in a browser:
-https://labs.krazeplanet.com/56.php?p='><svg/onload=alert("RAJVARDHAN")>
+1. Open the following URL in a browser: `https://labs.krazeplanet.com/56.php?p='><svg/onload=alert("RAJVARDHAN")>`
 
 2. Observe that a JavaScript alert box is triggered immediately.
 
-3. This confirms that arbitrary JavaScript supplied via the "p" parameter is executed in the browser.
+3. This confirms that arbitrary JavaScript supplied via the `p` parameter is executed in the browser.
 
 
 ## Payload Used
@@ -41,8 +40,7 @@ This confirms the presence of a Reflected Cross-Site Scripting (XSS) vulnerabili
 
 ## Remediation
 1. Sanitize all user-controlled input before rendering it in the response.
-2. Escape special characters such as:
-   `<`, `>`, `"`, `'`, `&`
+2. Escape special characters such as:  `<`, `>`, `"`, `'`, `&`
 3. Avoid reflecting unsanitized input directly into HTML or JavaScript contexts.
 4. Block dangerous JavaScript functions such as:
    - `alert()`
