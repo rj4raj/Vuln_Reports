@@ -35,11 +35,11 @@ Vulnerable Parameter: Report Name field inside the `New Network Report` form
 ## Proof of Concept
 This confirms the presence of a Stored Cross-Site Scripting (XSS) vulnerability.
 
-## Screenshot 1 — Malicious payload submitted through the New Network Report functionality
+`Screenshot 1` — Malicious payload submitted through the New Network Report functionality
 
 ![Payload Submission](screenshots/lab60.png)
 
-## Screenshot 2 — Stored payload executing automatically when the reports page loads
+`Screenshot 2` — Stored payload executing automatically when the reports page loads
 
 ![Stored XSS Execution](screenshots/lab60.2.png)
 
