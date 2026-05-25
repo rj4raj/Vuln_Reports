@@ -5,7 +5,7 @@ Open Redirect / JavaScript Injection via `returnTo` Parameter
 I identified a vulnerability in the "returnTo" parameter of the following endpoint:
 
 ## Vulnerable Endpoint
-https://kzlabs.com/57.php?returnTo=
+`https://kzlabs.com/57.php?returnTo=`
 
 The application allows execution of JavaScript using the `javascript:` URI scheme inside the `returnTo` parameter.
 
@@ -29,6 +29,11 @@ javascript:alert(document.cookie)`
 
 # Proof of Concept
 This confirms that arbitrary HTML and JavaScript can be injected and executed persistently.
+```http
+GET /57.php?returnTo=javascript:alert(101) HTTP/1.1
+Host: kzlabs.com
+```
+
 
 ## Screenshot 1 — Payload submitted successfully into the vulnerable field
 
@@ -43,10 +48,6 @@ This confirms that arbitrary HTML and JavaScript can be injected and executed pe
 ![Stored XSS Execution](screenshots/lab57.3.png)
 
 
-```http
-GET /57.php?returnTo=javascript:alert(101) HTTP/1.1
-Host: kzlabs.com
-```
 
 ## Impact
 
