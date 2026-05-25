@@ -2,7 +2,7 @@
 Open Redirect / JavaScript Injection via `returnTo` Parameter
 
 ## Summary
-I identified a vulnerability in the "returnTo" parameter of the following endpoint:
+I identified a vulnerability in the `returnTo` parameter of the following endpoint:
 
 ## Vulnerable Endpoint
 `https://kzlabs.com/57.php?returnTo=`
@@ -15,7 +15,7 @@ When a user clicks on the `Continue` button, the supplied JavaScript executes in
 
 1. Open the following URL in a browser: `https://kzlabs.com/57.php?returnTo=javascript:alert(101)`
 
-2. Click on the "Continue" button.
+2. Click on the `Continue` button.
 
 3. Observe that a JavaScript alert popup appears.
 
@@ -35,7 +35,7 @@ Host: kzlabs.com
 ```
 
 
-## Screenshot 1 — Payload submitted successfully into the vulnerable field
+`Screenshot 1` — Payload submitted successfully into the vulnerable field
 
 ![Payload Submission](screenshots/lab57.1.png)
 
@@ -51,7 +51,7 @@ Host: kzlabs.com
 
 ## Impact
 
-- JavaScript execution in victim browser
+- JavaScript execution in the victim browser
 - Cookie stealing
 - Phishing attacks
 - Session hijacking
