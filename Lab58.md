@@ -22,6 +22,10 @@ https://kzlabs.com/58.php/account/PixelWizard/messages
 
 # Proof of Concept
 This confirms that user-controlled input is rendered without proper sanitization or output encoding.
+```http
+GET /58.php/account/"><svg/onload=alert(1)>/messages HTTP/1.1
+Host: kzlabs.com
+```
 
 
 ## Screenshot 1 — Successful execution of the injected XSS payload
@@ -29,18 +33,17 @@ This confirms that user-controlled input is rendered without proper sanitization
 ![XSS Execution](screenshots/lab58.png)
 
 
-```http
-GET /58.php/account/"><svg/onload=alert(1)>/messages HTTP/1.1
-Host: kzlabs.com
-```
+
 
 ## Impact
 
-- An attacker can execute arbitrary JavaScript in the victim's browser.
-- Attackers may steal sensitive user information or session data.
-- Malicious scripts can be used to redirect users to phishing pages.
-- An attacker may perform actions on behalf of authenticated users.
-- This issue could affect other users if a crafted malicious link is shared.
+-Cookie stealing
+
+-Session hijacking
+
+-Phishing attacks
+
+-JavaScript execution in the victim browser
 
 ## Recommendations for Fix
 
