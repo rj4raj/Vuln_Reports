@@ -24,23 +24,24 @@ t3_u9po1l%20onmouseover=alert(document.domain)%20y=
 
 # Proof of Concept
 This confirms the existence of the identified vulnerability.
-## Screenshot 1 — Successful execution of the injected payload
-
-![Payload Execution](screenshots/lab59.png)
-
-
 ```http
 GET /59.php/svc/shreddit/api/comments/askreddit/t3_u9po1l%20onmouseover=alert(document.domain)%20y= HTTP/1.1
 Host: kzlabs.com
 ```
+Screenshot 1 — Successful execution of the injected payload 
+![Payload Execution](screenshots/lab59.png)
+
+
+
 
 ## Impact
+Cookie stealing
 
-- An attacker can execute arbitrary JavaScript in the victim's browser.
-- Attackers may steal session information or sensitive user data.
-- Malicious scripts may redirect users to phishing pages.
-- An attacker may perform actions on behalf of authenticated users.
-- This issue may affect users who interact with crafted malicious links.
+Session hijacking
+
+Phishing attacks
+
+JavaScript execution in the victim browser
 
 ## Recommendations for Fix
 
