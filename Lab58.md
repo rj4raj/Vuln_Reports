@@ -51,10 +51,5 @@ Host: kzlabs.com
 2. Escape special characters such as:
    `<`, `>`, `"`, `'`, `&`
 3. Avoid reflecting unsanitized input directly into HTML or JavaScript contexts.
-4. Block dangerous JavaScript functions such as:
-   - `alert()`
-   - `confirm()`
-   - `prompt()`
-5. If using PHP, use secure functions such as:
-php,htmlspecialchars($input, ENT_QUOTES, 'UTF-8');
+4. If using PHP, use secure functions such as: php,htmlspecialchars($input, ENT_QUOTES, 'UTF-8');
 
