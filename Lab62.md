@@ -50,7 +50,5 @@ This confirms the presence of a Stored Cross-Site Scripting (XSS) vulnerability 
 # Remediation
 1. Filter dangerous HTML tags like: `<script>, <svg>, <img>, <iframe>` before saving user input into the database.
 
-2. Block dangerous JavaScript event handlers like: `onload=, onerror=, onclick=`
-
-3. Encode user input before rendering it back to the page.
-4. If using PHP, use: `htmlspecialchars($input, ENT_QUOTES, 'UTF-8');`
+2. Encode user input before rendering it back to the page.
+3. If using PHP, use: `htmlspecialchars($input, ENT_QUOTES, 'UTF-8');`
