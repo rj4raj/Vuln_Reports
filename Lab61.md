@@ -35,7 +35,7 @@ Vulnerable Parameter: Write Article input field
 ## Proof of Concept
 This confirms that arbitrary JavaScript can be stored and executed persistently when the article page is viewed.
 
-## Screenshot 1 — Malicious payload stored inside the Write Article functionality
+`Screenshot 1` — Malicious payload stored inside the Write Article functionality
 
 ![Stored Article Payload](screenshots/lab61.png)
 
@@ -45,15 +45,12 @@ This confirms that arbitrary JavaScript can be stored and executed persistently 
 - Steal session cookies of authenticated users
 - Session hijacking
 - Arbitrary JavaScript execution
-- Phishing attacks
-- Unauthorized actions performed on behalf of users
-- Potential targeting of administrators or privileged users
+
 
 
 ## Remediation
 1. Sanitize all user-controlled input before rendering it in the response.
-2. Escape special characters such as:
-   `<`, `>`, `"`, `'`, `&`
+2. Escape special characters such as:  `<`, `>`, `"`, `'`, `&`
 3. Avoid reflecting unsanitized input directly into HTML or JavaScript contexts.
 4. Block dangerous JavaScript functions such as:
    - `alert()`
