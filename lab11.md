@@ -6,7 +6,7 @@ Reflected Cross-Site Scripting (XSS)
 
 Reflected XSS
 
-## Summary
+## Summary 
 
 A Reflected Cross-Site Scripting (XSS) vulnerability was identified in the following endpoint:
 
